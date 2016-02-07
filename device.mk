@@ -61,7 +61,7 @@ PRODUCT_COPY_FILES += \
 	device/lge/geehrc/init.geehrc.rc:root/init.geehrc.rc \
 	device/lge/geehrc/init.geehrc.usb.rc:root/init.geehrc.usb.rc \
 	device/lge/geehrc/fstab.geehrc:root/fstab.geehrc \
-	device/lge/geehrc/twrp.fstab:recovery/etc/twrp.fstab \
+	device/lge/geehrc/twrp.fstab:recovery/root/etc/twrp.fstab \
 	device/lge/geehrc/ueventd.geehrc.rc:root/ueventd.geehrc.rc \
 	device/lge/geehrc/media_profiles.xml:system/etc/media_profiles.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -257,7 +257,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-swap=false \
-    dalvik.vm.image-dex2oat-filter=speed
+    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.dex2oat-filter=speed
 
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -282,10 +283,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # set SELinux property value
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
-
-PRODUCT_PROPERTY_OVERRIDES += \
-        dalvik.vm.dex2oat-filter=speed \
-        dalvik.vm.dex2oat-swap=false
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
