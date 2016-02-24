@@ -43,10 +43,14 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
-	device/lge/geehrc/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-	device/lge/geehrc/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-	device/lge/geehrc/init.geehrc.wifi.sh:system/bin/init.geehrc.wifi.sh
+    device/lge/geehrc/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/lge/geehrc/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    device/lge/geehrc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/lge/geehrc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/lge/geehrc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/lge/geehrc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/lge/geehrc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+    device/lge/geehrc/init.geehrc.wifi.sh:system/bin/init.geehrc.wifi.sh
 
 PRODUCT_COPY_FILES += \
 	device/lge/geehrc/audio_policy.conf:system/etc/audio_policy.conf
