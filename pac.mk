@@ -19,9 +19,6 @@ PAC_BOOTANIMATION_NAME := 768
 # Enable Torch
 PRODUCT_PACKAGES += Torch
 
-# Inherit TWRP configs
-$(call inherit-product, device/lge/geehrc/recovery/twrp.mk)
-
 # build.prop overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=geehrc_open_eu \
